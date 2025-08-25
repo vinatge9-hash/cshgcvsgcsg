@@ -1,0 +1,238 @@
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coffee Haven — Home</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body style="font-family: 'Roboto', sans-serif;" class="bg-gray-50 text-gray-800" style="font-family: 'Roboto', sans-serif;">
+  <!-- Header / Nav -->
+  <header class="w-full bg-[#4b2e2b] text-white shadow-md">
+    <div class="w-full flex items-center justify-between px-6 py-4 max-w-none">
+      <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-full bg-amber-400 flex items-center justify-center transform hover:scale-105 transition-transform duration-200">
+          <svg class="w-6 h-6 text-[#4b2e2b]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 21h8M6 7h12M4 11h16M8 3h8" />
+          </svg>
+        </div>
+        <span class="text-2xl font-bold">Coffee Haven</span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="hover:underline hover:opacity-90">Home</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="hover:underline hover:opacity-90">About</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="hover:underline hover:opacity-90">Contact</a>
+        <button id="subscribeBtn" class="bg-amber-400 text-[#4b2e2b] px-4 py-2 rounded-md font-medium hover:bg-amber-300 transition">Subscribe</button>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="mobileMenuBtn" class="p-2 rounded-md bg-white text-[#4b2e2b]">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="w-full bg-[#3f2725] text-white hidden">
+      <div class="w-full px-6 py-4 space-y-3 max-w-none">
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="block">Home</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="block">About</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="block">Contact</a>
+        <button id="mobileSubscribe" class="w-full bg-amber-400 text-[#4b2e2b] px-4 py-2 rounded-md font-medium">Subscribe</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="w-full max-w-none">
+    <section class="w-full px-6 py-10 bg-gradient-to-b from-[#fff7f2] to-transparent">
+      <div class="w-full max-w-none flex flex-col md:flex-row items-center gap-8">
+        <div class="w-full md:w-1/2">
+          <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Warm coffee. Friendly faces. Your daily ritual.</h1>
+          <p class="text-lg text-gray-700 mb-6">Hand-roasted beans, crafted by baristas who care. Visit us in-store or order online for pickup.</p>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="inline-block bg-[#4b2e2b] text-white px-5 py-3 rounded-md hover:scale-105 transition">Find Us</a>
+            <button id="orderNow" class="inline-block bg-amber-400 text-[#4b2e2b] px-5 py-3 rounded-md hover:scale-105 transition">Order Now</button>
+          </div>
+
+          <div class="mt-6 flex items-center space-x-4 opacity-90">
+            <div class="flex items-center space-x-2">
+              <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow">
+                <svg class="w-6 h-6 text-[#4b2e2b]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11v11H3zM14 6h7v7h-7z" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-sm font-medium">Daily Fresh</div>
+                <div class="text-xs text-gray-600">Freshly roasted every morning</div>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-2">
+              <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow">
+                <svg class="w-6 h-6 text-[#4b2e2b]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.567-3 3.5S10.343 15 12 15s3-1.567 3-3.5S13.657 8 12 8z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v6" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-sm font-medium">Sustainably Sourced</div>
+                <div class="text-xs text-gray-600">Ethically-grown beans</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2">
+          <div class="w-full rounded-lg overflow-hidden shadow-lg transform hover:scale-101 transition-transform duration-300">
+            <img src="https://images.pexels.com/photos/23384632/pexels-photo-23384632.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Coffee shop interior" class="w-full h-72 object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specialties / Filterable Cards -->
+    <section class="w-full px-6 py-10">
+      <div class="w-full max-w-none flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold">Our Specialties</h2>
+        <div class="flex items-center space-x-2">
+          <label class="text-sm text-gray-600">Filter</label>
+          <select id="filterSelect" class="p-2 border rounded-md">
+            <option value="all">All</option>
+            <option value="espresso">Espresso</option>
+            <option value="milk">Milk-based</option>
+            <option value="cold">Cold</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-none">
+        <!-- Cards injected by JS -->
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="w-full px-6 py-10 bg-white">
+      <h3 class="text-xl font-semibold mb-4">What people are saying</h3>
+      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="p-4 bg-gray-50 rounded-lg shadow-sm">“Best cappuccino in the city — velvety and perfectly balanced.” — Mia</blockquote>
+        <blockquote class="p-4 bg-gray-50 rounded-lg shadow-sm">“Friendly staff and cozy vibe. Great place to work.” — Jacob</blockquote>
+        <blockquote class="p-4 bg-gray-50 rounded-lg shadow-sm">“They roast their own beans. You can taste the difference.” — Aisha</blockquote>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-[#4b2e2b] text-white py-6 mt-8">
+    <div class="w-full px-6 max-w-none flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>&copy; 2025 Coffee Haven</div>
+      <div class="flex items-center gap-4">
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="hover:underline">About</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="hover:underline">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Subscribe Modal (simple) -->
+  <div id="subscribeModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="w-11/12 sm:w-96 bg-white rounded-lg p-6 shadow-lg">
+      <h4 class="text-lg font-bold mb-2">Subscribe to Coffee Haven</h4>
+      <p class="text-sm text-gray-600 mb-4">Get weekly updates, special offers, and brewing tips.</p>
+      <input id="subEmail" type="email" placeholder="Your email" class="w-full p-3 border rounded-md mb-4" />
+      <div class="flex justify-end gap-2">
+        <button id="closeModal" class="px-4 py-2 rounded-md border">Cancel</button>
+        <button id="confirmSub" class="px-4 py-2 rounded-md bg-[#4b2e2b] text-white">Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn && mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Subscribe modal
+    const subscribeBtn = document.getElementById('subscribeBtn');
+    const mobileSubscribe = document.getElementById('mobileSubscribe');
+    const subscribeModal = document.getElementById('subscribeModal');
+    const closeModal = document.getElementById('closeModal');
+    const confirmSub = document.getElementById('confirmSub');
+
+    function openSubscribe(){ subscribeModal.classList.remove('hidden'); subscribeModal.classList.add('flex'); }
+    function closeSubscribe(){ subscribeModal.classList.add('hidden'); subscribeModal.classList.remove('flex'); }
+
+    subscribeBtn && subscribeBtn.addEventListener('click', openSubscribe);
+    mobileSubscribe && mobileSubscribe.addEventListener('click', openSubscribe);
+    closeModal && closeModal.addEventListener('click', closeSubscribe);
+
+    confirmSub && confirmSub.addEventListener('click', () => {
+      const email = document.getElementById('subEmail').value.trim();
+      if(!email || !email.includes('@')){
+        alert('Please enter a valid email.');
+        return;
+      }
+      closeSubscribe();
+      alert('Thanks for subscribing — we\'ll be in touch!');
+    });
+
+    // Order Now (simple CTA)
+    document.getElementById('orderNow').addEventListener('click', () => {
+      window.location.href = './contact.html';
+    });
+
+    // Specialties data
+    const specialties = [
+      { id:1, title:'Cappuccino', desc:'Rich espresso with steamed milk and velvety foam.', tag:'milk', img:'https://pixabay.com/get/g28c2f27a91153a86bd849128b675ad19f8b1cb793a7396a89c04d6fafb7b56962cda50066642890da4580112c01e14f9c586b3bad865056f848f3002cd827b30_640.jpg' },
+      { id:2, title:'Espresso', desc:'Concentrated shot with deep flavor and crema.', tag:'espresso', img:'https://pixabay.com/get/g9fa77e595480bd95a4da92d3e9390eab936c2a64775a218ad621e90000096a74b55c3e8b48ead226cd2c79a8718018aeac56e59406901b1da1c2cf49e3c254b2_640.jpg' },
+      { id:3, title:'Latte', desc:'Smooth espresso with steamed milk and light foam.', tag:'milk', img:'https://pixabay.com/get/g3d4a36b3df1e47356f62eb192703317b309c7530bfd825b26c1c06bf9d91f7bf745eddbf4b4934b8361ab38eaa2b8375cb316144160f43fb1fd4889845b4ba36_640.jpg' },
+      { id:4, title:'Cold Brew', desc:'Slow steeped, smooth, and slightly sweet — served cold.', tag:'cold', img:'https://images.pexels.com/photos/7282737/pexels-photo-7282737.jpeg?auto=compress&cs=tinysrgb&h=650&w=940' },
+      { id:5, title:'Americano', desc:'Espresso diluted with hot water — clean and bold.', tag:'espresso', img:'https://images.pexels.com/photos/19138957/pexels-photo-19138957.jpeg?auto=compress&cs=tinysrgb&h=650&w=940' },
+      { id:6, title:'Iced Latte', desc:'Chilled espresso with milk and ice — refreshing.', tag:'cold', img:'https://images.unsplash.com/photo-1621221814007-1d5bc6a30c0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwxfHxJY2VkJTIwbGF0dGUlMjBpbiUyMGElMjBjbGVhciUyMGdsYXNzJTIwd2l0aCUyMHN0cmF3JTIwb24lMjBhJTIwY2FmZSUyMHRhYmxlfGVufDB8MHx8fDE3NTYxMTkxODV8MA&ixlib=rb-4.1.0&q=80&w=1080' }
+    ];
+
+    const cardsContainer = document.getElementById('cards');
+    function renderCards(filter='all'){
+      cardsContainer.innerHTML = '';
+      const filtered = specialties.filter(s => filter === 'all' ? true : s.tag === filter);
+      filtered.forEach(s =>{
+        const card = document.createElement('article');
+        card.className = 'bg-white rounded-lg overflow-hidden shadow hover:shadow-xl transition transform hover:-translate-y-1';
+        card.innerHTML = `
+          <div class="w-full h-44 overflow-hidden">
+            <img src="${s.img}" alt="${s.title}" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4">
+            <h4 class="font-semibold text-lg mb-1">${s.title}</h4>
+            <p class="text-sm text-gray-600 mb-3">${s.desc}</p>
+            <div class="flex justify-between items-center">
+              <span class="text-xs uppercase text-gray-500">${s.tag}</span>
+              <button class="px-3 py-1 text-sm rounded bg-[#4b2e2b] text-white">Order</button>
+            </div>
+          </div>
+        `;
+        // Order button event
+        card.querySelector('button').addEventListener('click', () => { window.location.href = './contact.html'; });
+        cardsContainer.appendChild(card);
+      });
+    }
+
+    document.getElementById('filterSelect').addEventListener('change', (e) => renderCards(e.target.value));
+    renderCards();
+  </script>
+</body>
+</html>
